@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    class temperature {
+        tempC;
+
+        constructor(temp) {
+            if (temp > -273) {
+                        return this.tempC = temp
+                    } else {
+                        alert('Please input Temperature C > -273: ')
+                    }
+            this.tempC = temp
+        }
+
+        getConvertTempCtoTempF() {
+            return this.tempC * 1.8 + 32;
+        }
+
+        getConvertTempCtoTempK() {
+            return this.tempC * 237.15;
+        }
+        setTempC(temp){
+            this.tempC = temp;
+        }
+    }
+    let inputTemp = new temperature(25);
+    inputTemp.setTempC(30);
+    inputTemp.getConvertTempCtoTempF();
+    inputTemp.getConvertTempCtoTempK();
+document.write(`Cerius = ${inputTemp.tempC} converted: <br> = ${inputTemp.getConvertTempCtoTempF()} F <br> = ${inputTemp.getConvertTempCtoTempK()} K`);
+</script>
+</body>
+</html>
